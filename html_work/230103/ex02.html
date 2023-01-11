@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1:hover~label
+        {
+            font-size: 2rem;
+        }
+        h1:hover~p
+        {
+            background-color: orange;
+        }
+        input:checked~p
+        {
+            padding:2rem;
+        }
+        input[type=checkbox]
+        {
+            display: none;
+        }
+        label
+        {
+            background-color: orange;
+        }
+        input:checked+label
+        {
+            background-color: black;
+            color: white;
+        }
+        #input1:checked~p
+        {
+            display: block;
+        }
+        #input1p
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Header-1</h1>
+    <input id="input" type="checkbox">
+    <label for="input">input</label>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae vero sint deserunt provident ad facilis ratione impedit libero molestias ut explicabo officia rem recusandae eos nihil laborum minus, esse quibusdam?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae vero sint deserunt provident ad facilis ratione impedit libero molestias ut explicabo officia rem recusandae eos nihil laborum minus, esse quibusdam?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae vero sint deserunt provident ad facilis ratione impedit libero molestias ut explicabo officia rem recusandae eos nihil laborum minus, esse quibusdam?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae vero sint deserunt provident ad facilis ratione impedit libero molestias ut explicabo officia rem recusandae eos nihil laborum minus, esse quibusdam?</p>
+    <input id="input1" type="checkbox">
+    <label for="input1">input1</label>
+    <p id="input1p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam id necessitatibus expedita tenetur exercitationem placeat culpa autem cum temporibus doloribus rerum, quod perspiciatis dolor recusandae facilis ipsa nulla quo!</p>
+</body>
+</html>

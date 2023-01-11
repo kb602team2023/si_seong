@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!--
+            1. 자식 태그에 position absolute를 주면
+            부보 태크에 height position relative를 줘야된다
+            2. 자색 태그에 float: left/right를 주면
+            부모 태그에 overflow:hidden을 줘야한다.
+            3. hover checked 다른것을 변경 할 수있다.
+
+          -->
+
+    <div id="p1">
+        <div id="c1">
+            <h1>lorem ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam ea ipsum alias iusto culpa, esse sed placeat eos praesentium impedit, voluptatem animi natus inventore ducimus nulla perspiciatis libero, magnam explicabo.
+            </p>
+        </div>
+        <div id="c2">
+            <h1>lorem ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam ea ipsum alias iusto culpa, esse sed placeat eos praesentium impedit, voluptatem animi natus inventore ducimus nulla perspiciatis libero, magnam explicabo.
+            </p>
+        </div>
+    </div>
+    <style>
+        #p1
+        {
+            background-color: #ccc;
+            position: relative;
+            height: 500px;
+        }
+        #c1
+        {
+            /* margin-bottom: 5px; */
+            background-color: #aaa;
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            bottom: 0px;
+            right: 0px;
+        }
+        #c2
+        {
+            background-color: #ddd;
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            top: 100px;
+            left: 350px;
+        }
+    </style>
+</body>
+</html>

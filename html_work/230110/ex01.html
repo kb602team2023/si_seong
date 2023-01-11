@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            display: none;
+        }
+        div:nth-of-type(2)
+        {
+            display: none;
+        }
+        div:nth-of-type(3)
+        {
+            display: none;
+        }
+        input#tab1:checked~div:nth-of-type(2)
+        {
+            display: block;
+        }
+        input#tab2:checked~div:nth-of-type(3)
+        {
+            display: block;
+        }
+        div.button>label
+        {
+            cursor: pointer;
+            display: inline-block;
+            background-color: gray;
+            padding: 0.5rem 1rem;
+            border: 1px solid black;
+            opacity: 0.5;
+        }
+        input#tab1:checked~div.button>label:nth-of-type(1)
+        {
+            opacity: 1;
+        }
+        input#tab2:checked~div.button>label:nth-of-type(2)
+        {
+            opacity: 1;
+        }
+        #divTab1
+        {overflow: hidden;}
+        #divTab2
+        {overflow: hidden;}
+        #divTab1>h1
+        {
+            float: left; width: 15%;
+        }
+        #divTab1>p
+        {float: left; width: 80%;}
+        #divTab2>h1
+        {float: left;}
+    </style>
+</head>
+<body>
+    <input type="radio" name="tab" id="tab1">
+    <input type="radio" name="tab" id="tab2">
+    <div class="button">
+        <label for="tab1">tab1</label>
+        <label for="tab2">tab2</label>
+    </div>
+    <div id="divTab1">
+        <h1>TAB1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad molestias similique unde illum accusantium minus ipsum impedit. Sint fugiat labore placeat quidem sed veritatis quae voluptatibus voluptatum. Dolores, sequi!</p>
+    </div>
+    <div id="divTab2">
+        <h1>TAB2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo similique eius adipisci fuga ad. Inventore aliquam culpa et quas quis numquam aliquid ut, debitis adipisci suscipit minima provident ratione maxime.</p>
+    </div>
+</body>
+</html>

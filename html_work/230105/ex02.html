@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #main
+        {
+            background-color: blueviolet;
+            height: 965px;
+            width: 500px;
+            margin: auto;
+        }
+        #con1
+        {
+            background-color: blue;
+            height: 300px;
+            position: relative;
+        }
+        #con1_1
+        {
+            font-size: 30px;
+            right: 0;
+            position: absolute;
+            background-color: red;
+        }
+        #con1_2
+        {
+            font-size: 30px;
+            top: 100px;
+            right: 0;
+            position: absolute;
+            background-color: yellow;
+        }
+        #con2
+        {
+            background-color: purple;
+            height: 300px;
+            position: relative;
+        }
+        #con2_1
+        {
+            font-size: 30px;
+            background-color: red;
+            position: absolute;
+            bottom: 65px;
+        }
+        #con2_2
+        {
+            font-size: 30px;
+            background-color: yellow;
+            position: absolute;
+            bottom: 0;
+            left: 80px;
+        }
+        #con3
+        {
+            background-color: aqua;
+            height: 300px;
+            overflow: hidden;
+        }
+        #con3_1
+        {
+            float: right;
+        }
+        #con3_1>li
+        {
+            font-size: 30px;
+            background-color: violet;
+            display: inline-block;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="con1">
+            <div id="con1_1"><h1>111</h1></div>
+            <div id="con1_2"><h1>222</h1></div>
+        </div>
+        <div id="con2">
+            <div id="con2_1"><h2>333</h2></div>
+            <div id="con2_2"><h2>444</h2></div>
+        </div>
+        <div id="con3">
+            <ul id="con3_1">
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

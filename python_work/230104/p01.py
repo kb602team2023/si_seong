@@ -1,0 +1,5 @@
+a=('a:b:c:d')
+a=a.split(':')
+print(a)
+a='#'.join(a)
+print(a)

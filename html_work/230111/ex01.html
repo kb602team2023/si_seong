@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Caveat', cursive;
+        }
+        li
+        {
+            list-style: none;
+        }
+        a
+        {
+            text-decoration: none;
+        }
+    </style>
+    <style>
+        #main_header
+        {
+            background-image: url('KakaoTalk_20230110_103716151.png');
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            position: relative;
+        }
+        #main_header>h1
+        {
+            color: white;
+            cursor: pointer;
+        }
+        #main_header>a.left
+        {
+            position: absolute;
+            width: 64px;
+            left: 5px;
+            top:7px;
+            background-image: url('css_sprites.png')   ;
+            text-indent:-99999px;
+            /* background-position: 0px 0px; */
+            background-repeat: no-repeat;
+            /* display: block; */
+        }
+        #main_header>label.right
+        {
+            position: absolute;
+            top: 7px;
+            right: 5px;
+            width: 32px;
+            cursor:pointer;
+            background-image: url('css_sprites1.png');
+            text-indent:-99999px;
+            /* background-position: -62px 0px; */
+            background-repeat: no-repeat;
+        }
+        #toggle
+        {
+            display: none;
+        }
+        #toggle+#wrap>#toggle_gnb_wrap
+        {
+            display: none;
+        }
+        #toggle:checked+#wrap>#toggle_gnb_wrap
+        {
+            display: block;
+        }
+        #toggle_gnb_wrap
+        {
+            background-color: #363636;
+            padding: 0.8em;
+        }
+        #toggle_gnb
+        {
+            background-color: #fff;
+            padding: 0.2em;
+        }
+        #toggle_gnb>ul
+        {
+            overflow: hidden;
+        }
+        #toggle_gnb>ul>li
+        {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+        #top_gnb
+        {
+            overflow: hidden;
+            background-color: #944a4a;
+            padding: 0.5em;
+        }
+        #top_gnb>div>a
+        {
+            float: left;
+            width: 25%;
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <style>
+        #bottom_gnb
+        {
+            display: table;
+            /* overflow: hidden; */
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        #bottom_gnb>div
+        {
+            display: table-cell;
+            /* float: left; */
+            position: relative;
+        }
+        #bottom_gnb>div>a
+        {
+            display: block;
+            text-align: center;
+            height: 2em;
+            line-height: 2em;
+        }
+        #bottom_gnb>div>a::before
+        {
+            border-left: 1px solid black;
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 1px;
+            top:9px; left: -1px;
+        }
+        #main_section
+        {
+            padding: 2rem;
+        }
+        #section_header
+        {
+            padding: 2rem;
+        }
+        #main_section article p
+        {
+            padding: 1rem;
+        }
+        #main_footer
+        {
+            border-top: 1px solid black;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <a href="#" class="left">Main</a>
+            <h1>Mobile</h1>
+            <label for="toggle" class="right">Toggle</label>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <nav id="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <section id="main_section">
+            <article id="section_header">
+                <h1>section</h1>
+                <time>2023-01-10</time>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure doloribus necessitatibus placeat vero sunt laboriosam molestiae repellendus unde. Minima quisquam omnis eos vero neque quaerat, fuga repudiandae voluptatibus vitae ducimus.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro possimus voluptates iste? Nobis quam, quasi quibusdam ducimus temporibus fugit tempore alias? Maiores in possimus, eaque est autem quo illo nulla.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repellat esse a ratione placeat laboriosam aut! Provident illo consequuntur, accusamus, voluptatum facilis sapiente libero ipsum excepturi, fugit est molestias eligendi!</p>
+            </article>
+        </section>
+        <div id="main_footer">
+            <h2>경북산업직업전문학교</h2>
+            <address>대구 동구 동부로 121 본관</address>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+a = [1,2,3,4,4,4]
+print(a)
+a = set(a)
+print(a)
+a = str(a)
+print(a)
+a = tuple(a)
+print(a)
+a = list(a)
+print(a)
+#a = int(a)
+#a = dict(a)
+
+
+
+
+'''
+    int() 숫자형태 변환
+    str() 문자형태 변환
+    list() 리스트형태 변환
+    tuple() 튜플형태 변환
+    dict() 딕셔너리형태 변한
+    set() 집합형태 변환
+'''

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #main
+        {
+            height: 900px;
+            background-color: bisque
+        }
+        #p1
+        {   
+            height: 400px;
+            background-color: aquamarine;
+            position: relative;
+
+        }
+        #c1
+        {
+            position: absolute;
+            width: 200px;
+            right: 0;
+        }
+        #c2
+        {
+            position: absolute;
+            width: 200px;
+            bottom: 0;
+        }
+        #c3
+        {
+            position: absolute;
+            width: 200px;
+            bottom: 70px;
+            right: 400px;
+        }
+        #p2
+        {
+            height: 400px;
+            background-color: burlywood;
+            position: relative;
+        }
+        #a1
+        {
+            background-color: orange;
+            height: 100px;
+            position: absolute;
+            top: 150px;
+            left: 400px;
+        }
+        #b1
+        {
+            display: inline-block;
+            margin-top: 35px;
+            overflow: hidden;
+            background-color: cadetblue;
+        }
+        #b1>li
+        {
+            float: left;
+            list-style: none;
+            padding: 5px;
+        }
+        #a2
+        {
+            background-color: orange;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        #b2
+        {
+            display: inline-block;
+            margin-top: 35px;
+            overflow: hidden;
+            background-color: brown;
+        }
+        #b2>li
+        {
+            float: left;
+            list-style: none;
+            padding: 5px;
+        }
+        #a3
+        {
+            background-color: cornflowerblue;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+        }
+        #b3
+        {
+            display: inline-block;
+            margin-top: 35px;
+            overflow: hidden;
+            background-color: lawngreen;
+        }
+        #b3>li
+        {
+            float: left;
+            list-style: none;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="p1">
+            <div id="c1">
+                <h1>insup</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sed consequatur, deleniti placeat qui quibusdam expedita saepe voluptatibus deserunt neque blanditiis veniam nulla reprehenderit, libero quisquam illo voluptate amet aperiam.</p>
+            </div>
+            <div id="c2">
+                <h1>insup1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error rem commodi animi expedita necessitatibus, modi maxime excepturi cum numquam! Optio aliquam error deserunt exercitationem, reprehenderit harum! Facere dolorum maiores totam.</p>
+            </div>
+            <div id="c3">
+                <h1>insup2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sapiente accusamus fugiat impedit necessitatibus pariatur, reprehenderit dolorem amet nesciunt iure. Suscipit amet harum expedita culpa ipsa consectetur, commodi quis mollitia.</p>
+            </div>
+        </div>
+        <div id="p2">
+            <div id="a1">
+                <ul id="b1">
+                    <li>one</li>
+                    <li>two</li>
+                    <li>three</li>
+                    <li>four</li>
+                </ul>
+            </div>
+            <div id="a2">
+                <ul id="b2">
+                    <li>fiv</li>
+                    <li>six</li>
+                    <li>seven</li>
+                    <li>eight</li>
+                </ul>
+            </div>
+            <div id="a3">
+                <ul id="b3">
+                    <li>111</li>
+                    <li>222</li>
+                    <li>333</li>
+                    <li>444</li>
+                    <li>555</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

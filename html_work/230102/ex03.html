@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*후손 선택자
+        div a
+        자손 선택자
+        h2>a
+        */
+        div  a
+        {
+            color: red;
+        }
+        input
+        {
+            height: 1.3rem;
+        }
+        input[type=button]
+        {
+            height: 3.4rem;
+        }
+        input[type=button]:hover
+        {
+            height: 5rem;
+            background-color: aqua;
+        }
+        input[type=checkbox]:checked+input
+        {
+            padding: 3rem;
+        }
+        h2:active
+        {
+            font-size: 10rem;
+        }
+        p::first-letter
+        {
+            font-size: 3rem;
+        }
+        p::after
+        {
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur modi voluptatibus assumenda tempore quae. Totam aspernatur qui cupiditate, officiis et id delectus explicabo distinctio, nam iure sequi a nisi cum.</p>
+        <div>
+            <a href="//www.naver.com">바로 밑</a>
+            <h1>h1</h1>
+            <h2><a href="#">A태그</a></h2>
+        </div>
+        <div>
+            <h2>h2</h2>
+            <form action="#">
+                <input type="checkbox" name="" id="">
+                <input type="text" name="" id="">
+                <input type="button"  value="버튼">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

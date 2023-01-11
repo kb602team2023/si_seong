@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            font-family: 'Moon Dance', cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #app
+        {
+            display: flex;          /*한 행을 만드는 설정*/
+            align-items: center;   /*세로 중간 정렬*/
+            min-height: 100vh;      /*최소 높이 100%*/
+            justify-content: center;
+            background-color: #ccc;
+        }
+        h1
+        {
+            text-align: center;
+        }
+        ul
+        {
+            overflow: hidden;
+        }
+        li
+        {
+            font-size: 2rem;
+            list-style: none;
+            border: 1px solid black;
+            float: left;
+        }
+        li:first-child
+        {
+            border-radius: 1rem 0 0 1rem;
+        }
+        li:last-child
+        {
+            border-radius: 0 1rem 1rem 0;
+        }
+        a
+        {
+            color: black;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+        a:hover
+        {
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <h1>test</h1>
+            <!-- 
+                li속성 가로 만들기
+                1.display:inline-block
+                2.float:left
+             -->
+            <ul>
+                <li><a href="#">one</a></li>
+                <li><a href="#">two</a></li>
+                <li><a href="#">three</a></li>
+                <li><a href="#">four</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

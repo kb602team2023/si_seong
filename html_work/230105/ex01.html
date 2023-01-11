@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }    
+    #container
+    {
+        margin: auto;
+        height: 936px;
+        width: 723px;
+        background-color: aqua;
+        background-image: url("../1234.png");
+        background-repeat: no-repeat;
+        background-position: fixed;
+        background-position: bottom;
+    }
+    #container>h1
+    {
+        margin: 0 1rem;
+        background-color: #aaa;
+    }
+    #sub_container
+    {
+        background-color: #c9c9c9;
+        position: relative;
+        height: 187px;
+    }
+    #rightup
+    {
+        top: 1rem;
+        right: 0;
+        background-color: #ddd;
+        position: absolute;
+    }
+    #leftdown
+    {
+        bottom: 1rem;
+        background-color: #ddd;
+        position: absolute;
+    }
+    #sub_container2
+    {
+        background-color: #aaa;
+        overflow: hidden;        
+    }
+    #sub_container3
+    {
+        float: right;
+    }
+    #sub_container3>ul>li
+    {
+        display: inline-block;
+        background-color: #ddd;
+        margin: 1rem;
+    }
+    </style>
+</head>
+<body>
+    <!-- 
+        1 div 자손태그에 position absolute 를 주면 
+        부모 태그에 height, position relative를 줘야함
+        2.div 자손태그에 float:letf/right를 주면
+        부모태그에 overflow:hidden을 줘야함-->
+        <div id="container">
+            <h1>header-1</h1>
+            <div id="sub_container">
+                <div id="rightup">
+                    <h1>오른쪽 위에 가야함</h1>
+                </div>
+                <div id="leftdown">
+                    <h1>왼쪽 밑에 가야함</h1>
+                </div>
+            </div>
+            <div id="sub_container2">
+                <div id="sub_container3">
+                    <ul>
+                        <li><h2>하나</h2></li>
+                        <li><h2>둘</h2></li>
+                        <li><h2>셋</h2></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
