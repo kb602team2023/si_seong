@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+}
+li
+{
+    list-style-type: none;
+}
+a:visited
+{
+    color: black;
+}
+a
+{
+    text-decoration: none;
+}
+#main_header
+{
+    height: 60px;
+    line-height: 60px;
+    padding-left: 0.5em;
+    border-bottom:  1px solid black;
+    background-color: #98afde;
+}
+#main_gnb
+{
+    overflow: hidden;
+    background-color: #c9c9c9;
+    border-bottom:  1px solid black;
+    height: 40px;
+    line-height: 40px;
+}
+#main_gnb>.left
+{float: left; overflow: hidden;}
+#main_gnb>.left>li
+{float: left; padding: 0 0.5rem; border-right: 1px solid black;}
+#main_gnb>.right
+{float: right; overflow: hidden;}
+#main_gnb>.right>li
+{float: left; padding: 0 0.5rem; border-left: 1px solid black;}
+#content_wrap
+{
+    overflow: hidden;
+    background-color: #98afde;
+}
+#content_wrap>div
+{
+    float: left;
+}
+#content_left
+{
+    width: 200px;
+    min-height: 400px;
+}
+#content_lfet>ul>li
+{
+    border-bottom: 1px solid black;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+#content_left>li:nth-child(n)
+{
+    background-color: #98afde;
+}
+#content_left>li:nth-child(2n)
+{
+    background-color: #c9c9c9;
+}
+#content_right
+{
+    width: 100%;
+    margin-right: -200px;
+}
+#content_right>div
+{
+    padding-left: 1rem;
+    padding-right: 200px;
+}
