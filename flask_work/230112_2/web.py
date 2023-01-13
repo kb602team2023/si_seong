@@ -9,10 +9,8 @@ def index():
 
 @app.route("/game")
 def game():
-    # print(request.args.get('game'))
-    list=['가위','바위','보']
-    a=random.randint(list)
-    print(a)
+    print(request.args.get('game'))
+    print(request.args.get('game2'))
     return render_template('game.html')
 
 app.run(debug=True)

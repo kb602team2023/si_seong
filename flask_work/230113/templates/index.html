@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <style>
+        a
+        {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>container</h1>
+        <div class="row bg-primary p-3 m-1">
+            <h1 class="text-white">가위바위보</h1>
+            <div class="col mt-3">
+                <a class="alert alert-info" href="game?game=0">가위</a>
+                <a class="alert alert-info" href="game?game=1">바위</a>
+                <a class="alert alert-info" href="game?game=2">보</a>
+                <a class="alert alert-info" href="game?game=리셋">리셋</a>
+            </div>
+            <div class="col text-white">
+                0=가위/1=바위/2=보<br>
+                {% if not win %}
+                결과= 0승 0무 0패 
+                {% endif %}
+                {% if win %}
+                결과= {{win}}승 {{draw}}무 {{lose}}패 
+                {% endif %}<br>
+                내가 낸것 {{request.args.get('game')}} 상대방이 낸것 {{com}}
+            </div>
+        </div>
+        <div class="row bg-info p-3 m-1">
+            <h1>시 분 초 출력</h1>
+            <div>
+                <form action="time">
+                    <input class="form-control w-25" type="text" name="time" id="">
+                    <input class="btn btn-primary m-3 ms-4" type="submit" value="초 입력">
+                    <input class="btn btn-primary m-3 ms-4" type="submit" value="결과 초기화">
+                </form>
+            </div>
+            <div>
+                결과= {{h}}시 {{m}}분 {{s}}초
+            </div>
+        </div>
+        <div class="row bg-success p-3 m-1">
+            <h1>구구단 출력</h1>
+            <div>
+                <form action="gugudan">
+                    구구단 시작 숫자<br>
+                    <input type="text" name="gugudan1" id=""><br/>
+                    구구단 마지막 숫자<br>
+                    <input type="text" name="gugudan2" id=""><br>
+                    <input class="btn btn-primary m-3 ms-4" type="submit" value="구구단 결과">
+                </form>
+            </div>
+            <div class="text-white">
+                {{c}}
+            </div>
+        </div>
+        <div class="row ">
+            <h1>홀/짝수 구분하기</h1>
+            <div>
+                <form action="number">
+                    숫자 입력<br>
+                    <input type="text" name="number1" id=""><br>
+                    <!-- <input type="text" name="number2" id=""><br>
+                    <input type="text" name="number3" id=""><br>
+                    <input type="text" name="number4" id=""><br>
+                    <input type="text" name="number5" id=""><br>
+                    <input type="text" name="number6" id=""><br>
+                    <input type="text" name="number7" id=""><br>
+                    <input type="text" name="number8" id=""><br>
+                    <input type="text" name="number9" id=""><br>
+                    <input type="text" name="number10" id=""><br> -->
+                    <input class="btn btn-primary m-3 ms-4" type="submit" value="홀짝 구분">
+                </form>
+            </div>
+            <div>
+                <!-- 짝수={{d}}
+                홀수={{f}} -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
