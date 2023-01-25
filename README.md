@@ -15,4 +15,5 @@ git push origin main
 
 https://github.com/dron512/webai230110
 선생님 github 주소
+
 "# si_seong" 
