@@ -13,4 +13,6 @@ git  commit -m "massage"
 git push origin main
 서버에 올리는 명령어
 
+https://github.com/dron512/webai230110
+선생님 github 주소
 "# si_seong" 
