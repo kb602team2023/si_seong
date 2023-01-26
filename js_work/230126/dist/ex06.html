@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="my-div"></div>
+<script src="/ex06.555d3cf5.js"></script></body>
+</html>
+<script>const a = prompt("반지름을 입력하세요");
+const ua = `원의 반지름은 ${a}입니다.`;
+console.log(ua);
+const c = a * 6.28;
+const uc = `원의 둘레는 ${c}입니다.`;
+console.log(uc);
+const b = a * a * 3.14;
+const ub = `원의 넓이는 ${b}입니다.`;
+console.log(ub);
+let r = "";
+r += ua;
+r += "</br>";
+r += uc;
+r += "</br>";
+r += ub;
+r += "</br>";
+const $myDiv = document.getElementById("my-div");
+$myDiv.innerHTML = r;
+
+</script>
