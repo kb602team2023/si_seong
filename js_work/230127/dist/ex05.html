@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1번문제</h1>
+    <h1>숫자 2개를 입력받아 두 수 중 큰수 구하기</h1>
+    <input type="text" id="my-input1">
+    <input type="text" id="my-input2">
+    <button id="my-btn" onclick="doa();">큰 수 구하기</button>
+    <div id="my-div"></div>
+    <h1>2번문제</h1>
+    <h1>숫자를 입력받아 양수,0,음수 구분하기</h1>
+    <input type="text" id="my-input3">
+    <button onclick="dob();">정수 분류</button>
+    <div id="my-div2"></div>
+    <h1>3번문제</h1>
+    <h1>숫자 입력받아 이 숫자가 홀수인지 짝수인지 구분하기</h1>
+    <input type="text" id="my-input4">
+    <button onclick="doc();">홀/짝 분류</button>
+    <div id="my-div3"></div>
+<script src="/ex05.721e520a.js"></script></body>
+</html>
+<script>const $myinput1 = document.getElementById("my-input1");
+const $myinput2 = document.getElementById("my-input2");
+const $mydiv = document.getElementById("my-div");
+const doa = function() {
+    const a = parseInt($myinput1.value);
+    const b = parseInt($myinput2.value);
+    // const c =10;
+    // String(c);
+    // console.log(a);
+    // console.log(typeof a);
+    // console.log(typeof c);
+    // alert(a);
+    // alert(b);
+    if (a > b) {
+        c = `<h1>${a}이 더 큰 수 입니다.</h1>`;
+        $mydiv.innerHTML = c;
+        // alert(c);    
+        return;
+    }
+    if (a < b) {
+        result1 = `<h1>${b}이 더 큰 수 입니다.</h1>`;
+        $mydiv.innerHTML = result1;
+        // alert(result1);
+        return;
+    }
+// $mydiv.innerHTML=result;
+};
+
+</script>
+<script>const $myinput3 = document.getElementById("my-input3");
+const $mydiv1 = document.getElementById("my-div2");
+const dob = function() {
+    const num = parseInt($myinput3.value);
+    if (num > 0) {
+        $mydiv1.innerHTML = `<h1>${num}은 양수입니다.</h1>`;
+        return;
+    }
+    if (num == 0) {
+        $mydiv1.innerHTML = `<h1>${num}은 0입니다.</h1>`;
+        return;
+    }
+    if (num < 0) {
+        $mydiv1.innerHTML = `<h1>${num}은 음수입니다.</h1>`;
+        return;
+    }
+};
+
+</script>
+<script>const $myinput4 = document.getElementById("my-input4");
+const $mydiv2 = document.getElementById("my-div3");
+const doc = function() {
+    const num1 = parseInt($myinput4.value);
+    if (num1 % 2 == 0) $mydiv2.innerHTML = `<h1>이 수는 짝수입니다.</h1>`;
+    else $mydiv2.innerHTML = `<h1>이 수는 홀수입니다.</h1>`;
+};
+
+</script>

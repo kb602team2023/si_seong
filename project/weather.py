@@ -10,7 +10,6 @@ from flask import Flask,render_template
 # @app.route("/")
 # def weather():
 #     return render_template("weather.html")
-
 if os.path.isfile('weather.xlsx'):
     wb=load_workbook('weather.xlsx')
 else:
@@ -26,14 +25,14 @@ url="https://www.weather.go.kr/w/index.do"
 brow=webdriver.Chrome()
 brow.get(url)
 
-time.sleep(3)
+# time.sleep(3)
 html=brow.page_source
 
 html=BeautifulSoup(html,"html.parser")
 list=['po_102','po_112','po_108','po_99','po_101','po_90',
 'po_104','po_115','po_119','po_131','po_136','po_133',
 'po_177','po_146','po_143','po_152','po_138','po_159',
-'po_155','po_156','po_165','po_168','po_169','po_184','2714051000']
+'po_155','po_156','po_165','po_168','po_169','po_184']
 for i in list:
     a=html.find('dl',{'class',f"{i}"})
     city=a.select_one("dt")
