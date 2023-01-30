@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="number">
+    <button id="btn">확인</button>
+    <h1>양수 음수 0</h1>
+    <div id="a-div">
+
+    </div>
+    <h1>홀수 짝수</h1>
+    <div id="b-div">
+
+    </div>
+<script src="/ex01.0851002e.js"></script></body>
+</html>
+<script>const $btn = document.getElementById("btn");
+const $number = document.getElementById("number");
+const $adiv = document.getElementById("a-div");
+const $bdiv = document.getElementById("b-div");
+$btn.addEventListener("click", function() {
+    const number = $number.value;
+    let adivresult = "";
+    let bdivresult = "";
+    if (number > 0) adivresult = "양수 입니다.";
+    else if (number == 0) adivresult = "양수도 아니고 음수도 아니고 0 입니다.";
+    else adivresult = "음수 입니다.";
+    if (number % 2 == 0) bdivresult = "짝수 입니다.";
+    else bdivresult = "홀수 입니다.";
+    $adiv.innerHTML = number + " 은 " + adivresult;
+    $bdiv.innerHTML = `${number}은 ${bdivresult}`;
+});
+
+</script>

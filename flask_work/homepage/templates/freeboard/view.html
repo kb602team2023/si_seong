@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+
+{% block content %} 
+<div class="container">
+    <h1>freeboard/view.html</h1>
+    <h2>제목</h2>
+    {{res[1]}}
+    <h2>내용</h2>
+    {{res[2]}}
+    <h2>작성자</h2>
+    {{res[4]}}
+    <h2>조회수</h2>
+    {{res[5]}}
+    <h2>작성날짜</h2>
+    {{res[6]}}
+    <a class="btn btn-primary" href="/freeboard/select">목록</a>
+    
+</div>
+{% endblock %} 

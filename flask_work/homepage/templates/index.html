@@ -9,7 +9,21 @@
         <input class="btn btn-primary" type="submit" value="예측하기">
     </form>
     <h3>{{y}}</h3>
-
+    <h1>학습된 데이터</h1>
+    <h3>1번째 행 xs 2번째행 ys</h3>
+    <table class="table border">
+        <tr>
+            {% for col in xs %} 
+            <td>{{col[0]}}</td> 
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for col in ys %} 
+            <td>{{col}}</td> 
+            {% endfor %}
+        </tr>
+    </table>
+    <img src="static/images/a.png" alt="a.png" width="550">
 </div>
 {% endblock %} 
 
