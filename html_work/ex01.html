@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p-div{width: 300px; height: 300px; border:  1px solid black;}
+        .p-div>div{ width: 100px; height: 100px;}
+        .p-div>div:nth-child(1){background-color: red; bottom: 0;}
+        .p-div>div:nth-child(2){background-color: blue; right: 0;}
+        .p-div>div:nth-child(3){background-color: green;}
+    </style>
+</head>
+<body>
+    <div style="position: relative;" class="p-div">
+        <div style="position: absolute;">1번</div>
+        <div style="position: absolute;">2번</div>
+        <div style="position: absolute;">3번</div>
+    </div>
+</body>
+</html>

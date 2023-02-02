@@ -6,7 +6,6 @@ app=Blueprint('freeboard',__name__,url_prefix='/freeboard')
 @app.route("/select")
 def select():
     res = freeboardmanage.select()
-    print("select 됨",res)
     return render_template("freeboard/select.html",res=res)
 
 @app.route("/insertform")
@@ -25,5 +24,25 @@ def insertproc():
 def view():
     idx = int(request.args.get('idx'))
     res = freeboardmanage.selecrow(idx)
-    print("selectrow 됨")
     return render_template("freeboard/view.html",res=res)
+
+@app.route("delete")
+def delete():
+    idx=int(request.args.get('idx'))
+    freeboardmanage.delete(idx)
+    return redirect("/freeboard/select")
+
+@app.route("/updateform")
+def updateform():
+    idx=int(request.args.get('idx'))
+    res=freeboardmanage.selecrow(idx)
+    return render_template("freeboard/updateform.html",res=res)    
+
+@app.route("updateproc",methods=['post'])
+def updateproc():
+    title=request.form['title']
+    content=request.form['content']
+    writer=request.form['writer']
+    idx=request.form['idx']
+    freeboardmanage.update(title,content,writer,idx)
+    return redirect("/freeboard/select")

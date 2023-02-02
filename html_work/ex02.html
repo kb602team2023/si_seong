@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p-div{position: relative; width: 300px; height: 300px; border: 1px solid black;}
+        #p-div>div{position: absolute; width: 100px; height: 100px;}
+        #p-div>div:nth-child(1){background-color: red;left: 0; top: 0;}
+        #p-div>div:nth-child(2){background-color: blue; right: 0; top: 0;}
+        #p-div>div:nth-child(3){background-color: green; right: 0; bottom: 0;}
+        #p-div>div:nth-child(4){background-color: yellow; bottom: 0; left:0;}
+        #p-div:hover>div:nth-child(1){top: 120px; left: 60px; transition-duration: 1s;}
+        #p-div:hover>div:nth-child(2){right: 100px; top: 100px; transition-duration: 1s;}
+        #p-div:hover>div:nth-child(3){right: 100px; bottom: 100px; transition-duration: 1s;}
+        #p-div:hover>div:nth-child(4){bottom: 70px; left:30px; transition-duration: 1s;}
+        #p-div:hover{width: 600px; height: 550px; border: 1px solid black;}
+        
+    </style>
+</head>
+<body>
+    <div id="p-div">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="div1234"></div>
+       
+    </div>
+    <!-- <button id="btn">버튼</button> -->
+</body>
+</html>
+<!-- <script>
+    const $btn=document.getElementById("btn");
+    const $div1234=document.getElementById("div1234");
+    $btn.addEventListener('click',function(){$div1234.style.left="60px";})
+</script> -->

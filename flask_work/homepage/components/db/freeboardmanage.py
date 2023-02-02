@@ -49,10 +49,36 @@ def insert(title,content,writer):
     cursor.execute(sql)
     db.commit()
     db.close()
-    print("insert 해야함")
 
-def delete():
-    print("delete 해야함")
+def delete(idx):
+    db=pymysql.connect(
+        host=host,port=port,
+        user=user,passwd=password,
+        db=dbname,charset=charset
+    )
+    sql=f"""
+    DELETE FROM freeboard
+    WHERE idx={idx}
+    """
+    cursor=db.cursor()
+    cursor.execute(sql)
+    db.commit()
+    db.close()
 
-def update():
-    print("update 해야함")
+def update(title,content,writer,idx):
+    db=pymysql.connect(
+        host=host,port=port,
+        user=user,passwd=password,
+        db=dbname,charset=charset
+    )
+    sql=f"""
+    UPDATE freeboard
+    SET title ='{title}',
+        content ='{content}',
+        writer ='{writer}'
+    WHERE idx={idx}
+    """
+    cursor=db.cursor()
+    cursor.execute(sql)
+    db.commit()
+    db.close()
