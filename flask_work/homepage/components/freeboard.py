@@ -5,7 +5,9 @@ app=Blueprint('freeboard',__name__,url_prefix='/freeboard')
 
 @app.route("/select")
 def select():
-    res = freeboardmanage.select()
+    page=request.args.get('page')
+    page=1 if page is None else page
+    res = freeboardmanage.select(int(page))
     return render_template("freeboard/select.html",res=res)
 
 @app.route("/insertform")

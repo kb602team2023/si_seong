@@ -7,13 +7,14 @@ password='student123'
 dbname='siseong'
 charset='utf8'
 
-def select():
+def select(page):
     db=pymysql.connect(
         host=host,port=port,
         user=user,passwd=password,
         db=dbname,charset=charset
     )
-    sql='select * from freeboard'
+    startrow=(page-1)*3
+    sql=f'select * from freeboard order by idx desc limit {startrow},3'
     cursor=db.cursor()
     cursor.execute(sql)
     res=cursor.fetchall()

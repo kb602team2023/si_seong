@@ -1,1 +1,15 @@
 dracula theme
+isort
+docker
+jupyter
+jupyter cell tags
+jupyter keymap
+jupyter notebook renderers
+jupytersideshow
+한글
+live server
+python
+
+비주얼 코드 
+파이썬 3.10
+
