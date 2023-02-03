@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="f1" id="fi">
+    <input type="text" name="se" id="se">
+    <input type="text" name="tr" id="tr">
+    <input type="text" name="qu" id="qu">
+    <input type="text" name="pa" id="pa">
+    <button id="my-btn">버튼</button>
+    <p id="my-p"></p>
+<script src="/ex07.c111ef49.js"></script></body>
+</html>
+<script>const $fi = document.getElementById("fi");
+const $se = document.getElementById("se");
+const $tr = document.getElementById("tr");
+const $qu = document.getElementById("qu");
+const $pa = document.getElementById("pa");
+const $mybtn = document.getElementById("my-btn");
+const $myp = document.getElementById("my-p");
+$mybtn.addEventListener("click", ()=>{
+    let array = [
+        parseInt(`${fi.value}`),
+        parseInt(`${se.value}`),
+        parseInt(`${tr.value}`),
+        parseInt(`${qu.value}`),
+        parseInt(`${pa.value}`)
+    ];
+    let output = array[0];
+    for (const item of array)if (output < item) output = item;
+    console.log(array);
+    console.log(typeof array[0]);
+    console.log(output);
+    $myp.innerHTML = `제일 큰 수는 ${output}`;
+});
+
+</script>
