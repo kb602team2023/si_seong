@@ -8,7 +8,8 @@ def select():
     page=request.args.get('page')
     page=1 if page is None else page
     res = freeboardmanage.select(int(page))
-    return render_template("freeboard/select.html",res=res)
+    pagecnt,rowcnt=freeboardmanage.selecpagecntrowcnt()
+    return render_template("freeboard/select.html",res=res,pagecnt=pagecnt,rowcnt=rowcnt,curpage=page)
 
 @app.route("/insertform")
 def insertform():

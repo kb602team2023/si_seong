@@ -34,6 +34,22 @@ def selecrow(idx):
     db.close()
     return res
 
+def selecpagecntrowcnt():
+    db=pymysql.connect(
+        host=host,port=port,
+        user=user,passwd=password,
+        db=dbname,charset=charset
+    )
+    sql=f'select count(idx) from freeboard'
+    cursor=db.cursor()
+    cursor.execute(sql)
+    res=cursor.fetchone()
+    rowcnt=res[0]
+    pagecnt=int(rowcnt/3)
+    pagecnt=pagecnt if rowcnt%3==0 else pagecnt+1
+    db.close()
+    return pagecnt,rowcnt
+
 def insert(title,content,writer):
     db=pymysql.connect(
         host=host,port=port,

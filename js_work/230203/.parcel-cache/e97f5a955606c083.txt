@@ -1,10 +1,10 @@
-4783
+4786
 26D:\work\js_work\230203\src133198631108077521 1
 70D:\work\js_work\230203\node_modules\svgo\plugins\convertShapeToPath.js133198572253541362 0
 62D:\work\js_work\230203\node_modules\utility-types\package.json133198572252121014 0
 44D:\work\js_work\230203\node_modules\svgo\lib133198572255601218 1
 85D:\work\js_work\230203\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\Makefile133198572253170994 0
-27D:\work\js_work\230203\dist133198618720228459 1
+27D:\work\js_work\230203\dist133198786760277580 1
 90D:\work\js_work\230203\node_modules\@parcel\runtime-browser-hmr\lib\loaders\hmr-runtime.js133198572251110490 0
 68D:\work\js_work\230203\node_modules\@swc\helpers\lib\_ts_metadata.js133198572255491191 0
 52D:\work\js_work\230203\node_modules\terser\README.md133198572255260762 0
@@ -106,7 +106,7 @@
 62D:\work\js_work\230203\node_modules\tslib\modules\package.json133198572252040990 0
 61D:\work\js_work\230203\node_modules\utility-types\SECURITY.md133198572252990974 0
 83D:\work\js_work\230203\node_modules\@swc\helpers\src\_skip_first_generator_next.mjs133198572256321195 0
-36D:\work\js_work\230203\src\ex07.html133198627375421836 0
+36D:\work\js_work\230203\src\ex07.html133198787013207451 0
 58D:\work\js_work\230203\node_modules\escalade\sync\index.js133198572251270477 0
 66D:\work\js_work\230203\node_modules\@parcel\utils\lib\index.js.map133198572255781196 0
 56D:\work\js_work\230203\node_modules\terser\dist\.gitkeep133198572250662152 0
@@ -2540,6 +2540,7 @@
 83D:\work\js_work\230203\node_modules\@parcel\transformer-posthtml\lib\loadPlugins.js133198572250990472 0
 85D:\work\js_work\230203\node_modules\htmlnano\lib\modules\minifyConditionalComments.js133198572253210980 0
 76D:\work\js_work\230203\node_modules\abortcontroller-polyfill\src\polyfill.js133198572252580982 0
+44D:\work\js_work\230203\dist\ex07.c111ef49.js133198786760237583 0
 88D:\work\js_work\230203\node_modules\caniuse-lite\data\features\declarative-shadow-dom.js133198572257201281 0
 86D:\work\js_work\230203\node_modules\@swc\helpers\lib\_tagged_template_literal_loose.js133198572255370773 0
 69D:\work\js_work\230203\node_modules\htmlnano\lib\modules\minifyCss.js133198572253270991 0
@@ -4782,3 +4783,5 @@
 44D:\work\js_work\230203\dist\ex04.fe6b6678.js133198595784897010 0
 48D:\work\js_work\230203\dist\ex05.721e520a.js.map133198608532175596 0
 44D:\work\js_work\230203\dist\ex06.555d3cf5.js133198614292907074 0
+48D:\work\js_work\230203\dist\ex07.c111ef49.js.map133198786760277580 0
+37D:\work\js_work\230203\dist\ex07.html133198786760247591 0

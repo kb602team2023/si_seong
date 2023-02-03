@@ -19,12 +19,23 @@
     </table>
     <div >
         <ul id="my-ul" style="display: flex; justify-content: center;">
-            <li><a href="/freeboard/select?page-1">«</a></li>
-            <li><a class="active" href="/freeboard/select?page=1">1</a></li>
-            <li><a href="/freeboard/select?page=2">2</a></li>
-            <li><a href="/freeboard/select?page=3">3</a></li>
-            <li><a href="/freeboard/select?page=4">4</a></li>
-            <li><a href="/freeboard/select?page=4">»</a></li>
+            {% if curpage|int==1 %} 
+                <li><a>«</a></li>
+            {% else %}
+                <li><a href="/freeboard/select?page={{curpage|int-1}}">«</a></li>
+            {% endif %}
+            {% for page in range(1,pagecnt+1) %}
+                {% if page==curpage %}
+                    <li><a class="active" href="/freeboard/select?page={{page}}">{{page}}</a></li>
+                {% else %} 
+                    <li><a href="/freeboard/select?page={{page}}">{{page}}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if curpage|int == pagecnt|int %}
+                <li><a>»</a></li>
+            {% else %}
+                <li><a href="/freeboard/select?page={{curpage|int+1}}">»</a></li>
+            {% endif %}
         </ul>
     </div>
     <style>
