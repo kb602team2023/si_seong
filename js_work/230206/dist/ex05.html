@@ -1,0 +1,22 @@
+<script>const arr = [
+    "사과",
+    "배",
+    "바나나",
+    "귤"
+];
+arr.forEach((i, v)=>{
+    console.log(`v=${v}`);
+});
+arr.forEach((i)=>{
+    console.log(`i=${i}`);
+});
+const arr2 = arr.filter((item)=>{
+    return item.length >= 2;
+});
+console.log(arr2);
+const arr3 = arr.map((item)=>{
+    return item + item;
+});
+console.log(arr3);
+
+</script><script src="/ex05.721e520a.js"></script>

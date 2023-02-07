@@ -43,6 +43,6 @@ for i in list:
     print([data,city.text,weather.text,tem.text])
 
 
-
+wb.save('weather.png')
 # wb.save('weather.xlsx')
 # wb.close()
