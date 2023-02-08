@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <select id="id-lang" name="lang" onchange="chageLangSelect()">
+        <option value="" selected disabled>언어를 선택</option>
+        <option value="en">en(영어)</option>
+        <option value="ko">ko(한글)</option>
+        <option value="po_103">대구</option>
+    </select>
+    <button id="bb">버튼</button>
+    <div id="aa"></div>
 </body>
+
 </html>
+<script>
+    const $aa = document.getElementById('aa');
+    const $bb = document.getElementById('bb');
+    const $langSelect = document.getElementById("id-lang");
+    let selectText ="";
+    let selectValue="";
+    function chageLangSelect() {
+        // select element에서 선택된 option의 value가 저장된다.  
+        selectValue = $langSelect.options[$langSelect.selectedIndex].value;
+        // select element에서 선택된 option의 text가 저장된다.  
+        selectText = $langSelect.options[$langSelect.selectedIndex].text;
+        console.log(selectValue);
+        console.log(selectText);
+        
+    };
+    $bb.addEventListener('click', () => {
+        $aa.innerHTML = `selectText = ${selectText} selectValue = ${selectValue}`
+    });
+
+
+</script>
