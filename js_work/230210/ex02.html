@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $a = document.querySelector('#a');
+            const $b = document.querySelector('#b');
+            const $h1 = document.createElement('h1');
+            $h1.textContent = "h1 태그입니다";
+            $h1.setAttribute("data-mydata", "데이타");
+            $h1.style.backgroundColor = "#333";
+            $h1.style.color = "#c9c9c9"
+
+            $b.appendChild($h1);
+            const mytimeout = setTimeout(() => {
+                $a.appendChild($h1);
+            }, 1000);
+            const dofirst = () => {
+                setTimeout(() => {
+                    $a.appendChild($h1);
+                }, 5000);
+            };
+            const dosecond = () => {
+                setTimeout(() => {
+                    $b.appendChild($h1);
+                }, 3000);
+                dofirst();
+            };
+            dosecond();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="a">
+        <h1>a div</h1>
+    </div>
+    <div id="b">
+        <h1>b div</h1>
+    </div>
+</body>
+
+</html>

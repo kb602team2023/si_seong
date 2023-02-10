@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count=0;
+        let $button=null;
+        
+        const counterfn=()=>{
+            const $span=document.querySelector('span');
+            $span.innerHTML=(++count);
+            document.querySelector('h2').textContent='연결 상태 true';
+        };
+        const addeventfn=()=>{
+            // alert('addevent');
+            document.querySelector('h2').textContent='연결 상태 true';
+            $button.addEventListener('click',counterfn);
+        };
+        const removeEventfn=()=>{
+            // alert('removeEvent');
+            document.querySelector('h2').textContent='연결 상태 false';
+            $button.removeEventListener('click',counterfn);
+        };
+        const reset=()=>{
+            $span=document.querySelector('span');
+            $span.innerHTML=(count=0);
+            $button.addEventListener('click',counterfn);
+            document.querySelector('h2').textContent='연결 상태 none';
+        };
+        document.addEventListener('DOMContentLoaded',()=>{
+            $button=document.querySelector('button');
+            const $addevent=document.querySelector('#addevent');
+            const $removeEvent=document.querySelector('#removeEvent');
+            const $reset=document.querySelector('#reset');
+            $button.addEventListener('click',counterfn);
+            $addevent.addEventListener('click',addeventfn);
+            $removeEvent.addEventListener('click',removeEventfn);
+            $reset.addEventListener('click',reset)
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>클릭횟수 : <span>0</span></h1>
+        <h2>연결 상태</h2>
+        <button>버튼</button>
+        <button id="addevent">연결</button>
+        <button id="removeEvent">연결해제</button>
+        <button id="reset">리셋</button>
+    </div>
+</body>
+</html>

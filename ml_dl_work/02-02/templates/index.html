@@ -5,9 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const $mybtn = document.getElementById('my-btn');
+            const $length=document.getElementById('length');
+            const $weight=document.getElementById('weight');
+            const $myimg=document.getElementById('my-img');
+            $mybtn.addEventListener('click',()=>{
+                console.log($length.value);
+                console.log($weight.value);
+                const length=$length.value||30;
+                const weight=$weight.value||200;
+                $myimg.setAttribute('src',`/fig/int${length}_int${weight}`);
+                fetch(`redict?lengh=${length}weight=${weight}`)
+                .then((res)=>{
+                    return res.json();
+                    console.log(res);
+                })
+                .then((data)=>{
+                    console.log(data.race);
+                    const $p=document.querySelector('p');
+                    $p.innerHTML=`<h1>${data.race}</h1>`;
+                })
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>index.html</h1>
-    <img src="{{ url_for('fig',length=27,weight=200)}}" alt="image">
+    <h1>최근접 이웃 분류기</h1>
+    <input type="text" id="length">
+    <input type="text" id="weight">
+    <button id="my-btn">버튼</button>
+    <p></p>
+    <img src="/fig/int25_int150" alt="image" id="my-img">
 </body>
 </html>

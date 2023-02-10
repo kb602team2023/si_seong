@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            let count=0;
+            const $span =document.querySelector('span');
+            const $a=document.querySelector('#a');
+            const $b=document.querySelector('#b');
+            $a.addEventListener('click',()=>{
+                $span.innerHTML=(++count);
+            });
+            $b.addEventListener('click',()=>{
+                $span.innerHTML=(count=0);
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>클릭횟수 : <span>0</span></h1>
+        <button id="a">버튼</button>
+        <button id="b">리셋</button>
+    </div>
+</body>
+</html>

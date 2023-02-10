@@ -33,12 +33,9 @@ for i in list:
     weather=a.select_one("i")
     tem=a.select_one("span")
     data=time.strftime("%m" "%d",time.localtime(time.time()))
-    # print(data)SS
     ws.append([data,city.text,weather.text,tem.text])
-    # ws.append([])
+    # print(i)
 
-
-# ws.append([])
 
 wb.save('weather.xlsx')
 wb.close()

@@ -16,11 +16,30 @@ fish_target=np.concatenate((np.ones(35),np.zeros(14)))
 
 train_input,test_input,train_target,test_target=train_test_split(fish_data,fish_target,random_state=42)
 
-plt.scatter(fish_data[:,0],fish_data[:,1])
-plt.scatter(25,150,marker='^')
-plt.show()
+# plt.scatter(fish_data[:,0],fish_data[:,1])
+# plt.scatter(25,150,marker='^')
+# plt.show()
 
 knr=KNeighborsClassifier()
 knr.fit(train_input,train_target)
 result=knr.predict([[25,150]])
 print(result)
+
+fish_scaled=(fish_data-np.mean(fish_data,axis=0))/np.std(fish_data,axis=0)
+print(fish_scaled[:5])
+
+new=(np.array([25,150])-np.mean(fish_data,axis=0))/np.std(fish_data,axis=0)
+
+knr=KNeighborsClassifier()
+knr.fit(fish_scaled,fish_target)
+
+result=knr.predict([new])
+print(result)
+
+distances,indexs=knr.kneighbors([new])
+
+
+plt.scatter(fish_scaled[:,0],fish_scaled[:,1])
+plt.scatter(new[0],new[1],marker='^')
+plt.scatter(fish_scaled[indexs,0],fish_scaled[indexs,1],marker='D')
+plt.show()
