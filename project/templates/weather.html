@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #my-table{
+            font-size: 3rem;
+            border : 1px solid red;
+        }
+        #my-table td{
+            font-size: 5rem;
+            border: 1px solid gold;
+            background-color: black;
+            color: white;
+            padding: 1px;
+            margin: 2px;
+        }
+        #my-table th{
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     weather.html
@@ -40,20 +57,22 @@
         <input type="submit" value="전송" id="my-input">
     </form>
     <div id="my-div">
-        <table border="1">
+        <table id="my-table">
             <tr>
+                선택하신 {{result[1]}}의 날씨입니다.
                 <th>날짜</th>
                 <th>도시</th>
                 <th>날씨</th>
                 <th>온도</th>
             </tr>
             <tr>
-                <th>{{result[0]}}</th>
-                <th>{{result[1]}}</th>
-                <th>{{result[2]}}</th>
-                <th>{{result[3]}}</th>
+                <td>{{result[0]}}</td>
+                <td>{{result[1]}}</td>
+                <td>{{result[2]}}</td>
+                <td>{{result[3]}}</td>
             </tr>
         </table>
+        <br>{{result[1]}}의 날씨는 {{result[2]}}이고 온도는 {{result[3]}}도 입니다.
     </div>
 </body>
 </html>
@@ -67,7 +86,5 @@
         selectText=$mysel.options[$mysel.selectedIndex].text;
         selectValue=$mysel.options[$mysel.selectedIndex].value;
     }
-    $myinput.addEventListener('click',()=>{
-        $mydiv.innerHTML+=`${selectValue}`
-    })
+    
 </script>

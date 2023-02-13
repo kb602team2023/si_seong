@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const $h1=document.querySelector('h1');
+            let cont=0;
+            const $h2=document.querySelector('h2');
+            const $button = document.querySelector('button');
+            const movestar=(e)=>{
+                console.log(e.keyCode);
+                let x=parseInt(window.getComputedStyle($h1).left);
+                let y=parseInt(window.getComputedStyle($h1).top);
+                if(e.keyCode===37){
+                    $h1.style.left=(x-1)+'px';
+                }
+                else if(e.keyCode===38){
+                    $h1.style.top=(y-1)+'px';
+                }
+                else if(e.keyCode===39){
+                    $h1.style.left=(x+1)+'px';
+                    cont++;
+                }
+                else if(e.keyCode===40){
+                    $h1.style.top=(y+1)+'px';
+                }
+                if(cont==10){
+                    console.log('h2');
+                    $h2.innerHTML=`${cont}누름`;
+                }
+            };
+            $button.addEventListener('click',()=>{
+                $h1.style.left=0;
+                $h1.style.top=0;
+            })
+            document.addEventListener('keydown',movestar);
+            //up 38 down 40 left 37 right 39
+        })
+    </script>
+</head>
+<body>
+    <h1>★</h1>
+    <h2></h2>
+    <button>리셋</button>
+</body>
+</html>
