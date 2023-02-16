@@ -34,7 +34,8 @@ for i in list:
     tem=a.select_one("span")
     data=time.strftime("%m" "%d",time.localtime(time.time()))
     ws.append([data,city.text,weather.text,tem.text])
-    # print(i)
+    result=([data,city.text,weather.text,tem.text])
+    print(result)
 
 
 wb.save('weather.xlsx')

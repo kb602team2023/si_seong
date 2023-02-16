@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.body.style.backgroundColor = 'black';
+            const $earth = document.querySelector('#earth');
+            const $sun = document.querySelector('#sun');
+            $earth.style.position= 'absolute';
+            $sun.style.position= 'absolute';
+            $sun.style.left='100px';
+            $sun.style.top='100px';
+
+            const distance = 50;
+            let gak =0;
+            setInterval(()=>{
+                // Math.sin();
+                gak =gak+0.3;
+                
+                x= Math.sin(gak);
+                y= Math.cos(gak);
+                // console.log(`gak=${gak}`);
+                // console.log(`x=${x}  x*50=${x*50}`);
+                // console.log(`y=${y}  y*50=${y*50}`);
+                $earth.style.left=(x*85+120)+"px";
+                $earth.style.top=(y*85+120)+"px";
+            },200)
+        });
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="sun">
+            <img src="sun.png" alt="" width="100" height="100">
+        </div>
+        <div id="earth">
+            <img src="earth.png" alt="" width="50" height="50">
+        </div>
+    </div>
+</body>
+</html>

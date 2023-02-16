@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #my-table{
+        #my-table {
             font-size: 3rem;
-            border : 1px solid red;
+            border: 1px solid red;
         }
-        #my-table td{
+
+        #my-table td {
             font-size: 5rem;
             border: 1px solid gold;
             background-color: black;
@@ -18,42 +20,47 @@
             padding: 1px;
             margin: 2px;
         }
-        #my-table th{
+
+        #my-table th {
             border: 1px solid black;
         }
+        /* #my-sel{
+            display: none;
+        } */
     </style>
 </head>
+
 <body>
     weather.html
     <h1><a href="/">index</a></h1>
     <form action="weather">
         <select name="city" id="my-sel" onchange="cityselect()">
             <option value="">도시를 선택하세요</option>
-            <option value='po_102'>백령도</option>
-            <option value='po_112'>인천</option>
-            <option value='po_108'>서울</option>
-            <option value='po_99'>파주</option>
-            <option value='po_101'>춘천</option>
-            <option value='po_90'>속초</option>
-            <option value='po_104'>강릉</option>
-            <option value='po_115'>울릉도/독도</option>
-            <option value='po_119'>수원</option>
-            <option value='po_131'>청주</option>
-            <option value='po_136'>안동</option>
-            <option value='po_133'>대전</option>
-            <option value='po_177'>홍성</option>
-            <option value='po_146'>전주</option>
-            <option value='po_143'>대구</option>
-            <option value='po_152'>울산</option>
-            <option value='po_138'>포항</option>
-            <option value='po_159'>부산</option>
-            <option value='po_155'>창원</option>
-            <option value='po_156'>광주</option>
-            <option value='po_165'>목포</option>
-            <option value='po_168'>여수</option>
-            <option value='po_169'>흑산도</option>
-            <option value='po_184'>제주</option>
-        </select>    
+            <option value='po_102' value1='po2_102'>백령도</option>
+            <option value='po_112' value1='po2_112'>인천</option>
+            <option value='po_108' value1='po2_108'>서울</option>
+            <option value='po_99'  value1='po2_99'>파주</option>
+            <option value='po_101' value1='po2_101'>춘천</option>
+            <option value='po_90'  value1='po2_90'>속초</option>
+            <option value='po_104' value1='po2_104'>강릉</option>
+            <option value='po_115' value1='po2_115'>울릉도/독도</option>
+            <option value='po_119' value1='po2_119'>수원</option>
+            <option value='po_131' value1='po2_131'>청주</option>
+            <option value='po_136' value1='po2_136'>안동</option>
+            <option value='po_133' value1='po2_133'>대전</option>
+            <option value='po_177' value1='po2_177'>홍성</option>
+            <option value='po_146' value1='po2_146'>전주</option>
+            <option value='po_143' value1='po2_143'>대구</option>
+            <option value='po_152' value1='po2_152'>울산</option>
+            <option value='po_138' value1='po2_138'>포항</option>
+            <option value='po_159' value1='po2_159'>부산</option>
+            <option value='po_155' value1='po2_155'>창원</option>
+            <option value='po_156' value1='po2_156'>광주</option>
+            <option value='po_165' value1='po2_165'>목포</option>
+            <option value='po_168' value1='po2_168'>여수</option>
+            <option value='po_169' value1='po2_169'>흑산도</option>
+            <option value='po_184' value1='po2_184'>제주</option>
+        </select>
         <input type="submit" value="전송" id="my-input">
     </form>
     <div id="my-div">
@@ -74,17 +81,52 @@
         </table>
         <br>{{result[1]}}의 날씨는 {{result[2]}}이고 온도는 {{result[3]}}도 입니다.
     </div>
+    <form action="weather1">
+        <select name="city1" id="my-sel1" onchange="cityselect1()">
+            <option value="">도시를 선택하세요</option>
+            <option value='po2_102'>백령도</option>
+            <option value='po2_112'>인천</option>
+            <option value='po2_108'>서울</option>
+            <option value='po2_99'>파주</option>
+            <option value='po2_101'>춘천</option>
+            <option value='po2_90'>속초</option>
+            <option value='po2_104'>강릉</option>
+            <option value='po2_115'>울릉도/독도</option>
+            <option value='po2_119'>수원</option>
+            <option value='po2_131'>청주</option>
+            <option value='po2_136'>안동</option>
+            <option value='po2_133'>대전</option>
+            <option value='po2_177'>홍성</option>
+            <option value='po2_146'>전주</option>
+            <option value='po2_143'>대구</option>
+            <option value='po2_152'>울산</option>
+            <option value='po2_138'>포항</option>
+            <option value='po2_159'>부산</option>
+            <option value='po2_155'>창원</option>
+            <option value='po2_156'>광주</option>
+            <option value='po2_165'>목포</option>
+            <option value='po2_168'>여수</option>
+            <option value='po2_169'>흑산도</option>
+            <option value='po2_184'>제주</option>
+        </select>
+        <input type="submit" value="전송" id="my-input1">
+    </form>
+    <div id="my-div1">{{result1}}</div>
+
 </body>
+
 </html>
 <script>
-    const $mysel=document.getElementById('my-sel');
-    const $myinput=document.getElementById('my-input');
-    const $mydiv=document.getElementById('my-div');
-    let selecttext="";
-    let selectvalue="";
-    function cityselect(){
-        selectText=$mysel.options[$mysel.selectedIndex].text;
-        selectValue=$mysel.options[$mysel.selectedIndex].value;
+    const $mysel = document.getElementById('my-sel');
+    const $myinput = document.getElementById('my-input');
+    const $mydiv = document.getElementById('my-div');
+    let selecttext = "";
+    let selectvalue = "";
+    let selectvalue1="";
+    function cityselect() {
+        selectText = $mysel.options[$mysel.selectedIndex].text;
+        selectValue = $mysel.options[$mysel.selectedIndex].value;
+        selectValue1 = $mysel.options[$mysel.selectedIndex].getAttribute(value1);
     }
-    
+    // $mydiv.innerHTML+=`selectValue1=${selectvalue1}`
 </script>

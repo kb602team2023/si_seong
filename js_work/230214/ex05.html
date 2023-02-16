@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const $select= document.querySelector('select');
+            const $p= document.querySelector('p');
+
+            const list=[];
+            // const a="aaa";
+            // const b="bbb";
+            // list.push(a);
+            // list.push(b);
+
+            // console.log(list.join(','));
+
+            $select.addEventListener('change',()=>{
+                const options=event.currentTarget.options;
+                const list=[];
+                // const index=event.currentTarget.options.selectedIndex;
+                for(const item of options){
+                    if(item.selected){
+                        list.push(item.textContent);
+                    };
+                };
+
+                // console.log(`options ${options}`);
+                // console.log(`index ${index}`);
+                $p.textContent=`선택 ${list.join(',')}`
+            });
+        });
+    </script>
+</head>
+<body>
+    <select name="" id="" multiple>
+        <option value="">떡볶이</option>
+        <option value="">튀김</option>
+        <option value="">순대</option>
+        <option value="">오뎅</option>
+    </select>
+    <p></p>
+</body>
+</html>
