@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            const $input = document.querySelector('input');
+            const $button=document.querySelector('button');
+            const $h1=document.querySelector('h1');
+            const $form=document.querySelector('form');
+            const $output=document.querySelector('#output');
+            const list=[];
+            const $h3=document.querySelector('h3');
+
+            const randomvalue=parseInt(Math.random()*100+1);
+            console.log(`randomvalue=${randomvalue}`);
+            $button.addEventListener('click',(e)=>{
+                e.preventDefault();
+                if($input.value.length===0){alert('값을 입력하세요'); return;}
+                $output.innerHTML=`랜덤값=${randomvalue}`
+                list.push($input.value);
+                $output.innerHTML+=`<br> ${list.join(',')}`;
+                // alert('form 서브밋 디면 경로 이동');
+                // $form.submit();
+                if(randomvalue<parseInt($input.value)){
+                    $h3.textContent='lower';    
+                }
+                else if(randomvalue>parseInt($input.value)){
+                    $h3.textContent='higher';
+                }
+                else{
+                    $h3.textContent=`congratulations, you are right ${list.length} times.`;
+                }
+                if(list.length===10){
+                    $input.setAttribute('disabled','true');
+                    $button.setAttribute('disabled','true');
+                    $h3.textContent=`you don't have opportunity.${list.length} times.`;
+                    $h3.style.color='#c00';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="content">
+        <h1>숫자 맞추기 게임</h1>
+        <p>랜덤 숫자 1~100까지 맞추기 게임 10번의 시도를 할 수 있습니다</p>
+        <label for="">숫자 입력</label>
+        <input type="text">
+        <form action="">
+            <button>입력</button>
+        </form>
+        <h1 id="output"></h1>
+        <h3></h3>
+    </div>
+</body>
+</html>

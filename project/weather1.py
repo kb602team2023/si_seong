@@ -8,6 +8,7 @@ from datetime import datetime
 
 
 
+
 def weather1(selectValue1):
     print(f'selectValue1={selectValue1}')
     url="https://www.weather.go.kr/w/index.do"
@@ -18,9 +19,17 @@ def weather1(selectValue1):
     time.sleep(3)
     html=brow.page_source
     html=BeautifulSoup(html,"html.parser")
+    
     b=html.find('dl',{'class',f"{selectValue1}"})
     city=b.select_one('dt')
     tem=b.select('span')
-    result1=([city.text,tem[0].text,tem[1].text])
+    today = datetime.today()
+    mymonth = '0'+str(today.month) if len(str(today.month)) ==1 else today.month
+    yesday = today.day-1
+    myday = '0'+str(yesday) if len(str(yesday)) ==1 else yesday
+    yesterday = f"{mymonth}{myday}"
+    # print(yesterday)
+
+    result1=([yesterday,city.text,tem[0].text,tem[1].text])
     return result1
 

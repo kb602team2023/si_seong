@@ -1,0 +1,18 @@
+<script>
+    const doa = () => {
+        try {
+            console.log('aaa');
+            // willExcept.test();
+            throw'강제 예외발생'
+            console.log('bbb');
+        }
+        catch (error) {
+            console.log(error);
+        }
+        finally {
+            console.log("finally");
+        }
+    };
+    doa();
+
+</script>

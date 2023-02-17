@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>과학</th>
+            <th>총점</th>
+            <th>평균</th>
+        </tr>
+    </table>
+    <button>추가</button>
+</body>
+
+</html>
+<script>
+    const $table = document.querySelector('table');
+    const students = [];
+    const $button = document.querySelector('button');
+    // const getsum=(student)=>{return student.국어+student.영어+student.수학+student.과학;};
+    // const getavg=(student)=>{return getsum(student)/4;};
+
+    $button.addEventListener('click', () => {
+
+        students.push({ 이름: '구름', 국어: 87, 영어: 98, 수학: 95, 과학: 80 });
+        students.push({ 이름: '별이', 국어: 80, 영어: 70, 수학: 85, 과학: 75 });
+        students.push({ 이름: '겨울', 국어: 78, 영어: 88, 수학: 80, 과학: 60 });
+        students.push({ 이름: '바다', 국어: 75, 영어: 90, 수학: 90, 과학: 85 });
+
+        // console.log(JSON.stringify(students,null,2));
+        students.forEach((obj)=>{
+            obj.getsum=(student)=>{return student.국어+student.영어+student.수학+student.과학;};
+            obj.getavg=(student)=>{return student.getsum(student)/4;};
+        });
+
+        students.forEach((obj) => {
+            const $tr = document.createElement('tr');
+            const $tdname = document.createElement('td');
+            $tdname.textContent = obj.이름;
+            const $tdkor = document.createElement('td');
+            $tdkor.textContent = obj.국어;
+            const $tdmath = document.createElement('td');
+            $tdmath.textContent = obj.수학;
+            const $tdeng = document.createElement('td');
+            $tdeng.textContent = obj.영어;
+            const $tdsci = document.createElement('td');
+            $tdsci.textContent = obj.과학;
+            const $tdsum=document.createElement('td');
+            $tdsum.textContent= obj.getsum(obj);
+            const $tdavg = document.createElement('td');
+            $tdavg.textContent = obj.getavg(obj);
+
+
+            $tr.appendChild($tdname);
+            $tr.appendChild($tdkor);
+            $tr.appendChild($tdmath);
+            $tr.appendChild($tdeng);
+            $tr.appendChild($tdsci);
+            $tr.appendChild($tdsum);
+            $tr.appendChild($tdavg);
+            $table.appendChild($tr);
+
+        });
+
+
+
+    })
+
+</script>
