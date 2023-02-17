@@ -1,23 +1,10 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 import time
-from openpyxl import Workbook,load_workbook
-import os.path
-from datetime import datetime
 
 
 def weather(selectValue):
-    if os.path.isfile('weather.xlsx'):
-        wb=load_workbook('weather.xlsx')
-    else:
-        wb=Workbook()
 
-    ws = wb.active
-    print(f'selectValue={selectValue}')
-# if ws.max_row==1:
-#     ws.append(['날짜','도시','날씨','온도'])
-    ws.append(['날짜','도시','날씨','온도'])
     url="https://www.weather.go.kr/w/index.do"
 
     brow=webdriver.Chrome()

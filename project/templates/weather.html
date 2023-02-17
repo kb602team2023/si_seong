@@ -47,7 +47,7 @@
 </head>
 
 <body>
-    weather.html
+    <!-- weather.html -->
     <h1><a href="/">index</a></h1>
     <form action="weather">
         오늘의 날씨검색<select name="city" id="my-sel" onchange="cityselect()">
@@ -92,10 +92,10 @@
                 <td>{{result[0]}}</td>
                 <td>{{result[1]}}</td>
                 <td>{{result[2]}}</td>
-                <td>{{result[3]}}</td>
+                <td>{{result[3]}}℃</td>
             </tr>
         </table>
-        <br>{{result[1]}}의 날씨는 {{result[2]}}이고 온도는 {{result[3]}}도 입니다.
+        <br>{{result[1]}}의 날씨는 {{result[2]}}이고 온도는 {{result[3]}}℃입니다.
     </div>
     <br>
     <form action="weather1">
@@ -140,11 +140,11 @@
             <tr>
                 <td>{{result1[0]}}</td>
                 <td>{{result1[1]}}</td>
-                <td>{{result1[2]}}</td>
-                <td>{{result1[3]}}</td>
+                <td>{{result1[2]}}℃</td>
+                <td>{{result1[3]}}℃</td>
             </tr>
         </table>
-        <br>{{result1[1]}}의 최고기온은 {{result1[2]}}이면 최저기온은 {{result1[3]}}입니다.
+        <br>{{result1[1]}}의 최고기온은 {{result1[2]}}℃이면 최저기온은 {{result1[3]}}℃입니다.
     </div>
 
 </body>

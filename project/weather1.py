@@ -2,15 +2,12 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-from openpyxl import Workbook,load_workbook
-import os.path
 from datetime import datetime
 
 
 
 
 def weather1(selectValue1):
-    print(f'selectValue1={selectValue1}')
     url="https://www.weather.go.kr/w/index.do"
     brow=webdriver.Chrome()
     brow.get(url)
